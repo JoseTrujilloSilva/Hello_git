@@ -33,13 +33,13 @@ if (move_uploaded_file($rutaArch, $rutaCompleta)) {
 }
 
 
-$idCom = $_POST['idCom'];
+$idCom = explode('=', $_POST['idCom'])[1];
 $name = '@'.$_POST['name'];
 $password = $_POST['password'];
 $id = random_int(900, 9999999);
 $keyss = random_int(9999, 9999999);
 $keyssString = strval($keyss);
-
+echo '<br>';
 echo $idCom.'<br>';
 echo $id.'<br>';
 echo $keyss.'<br>';
@@ -62,6 +62,7 @@ $sql->bind_param('iissss', $idCom, $id, $name, $passwordEncrypt, $formatImage, $
 
 $sql->execute();
 
+
 $sql2 = $bbdd->prepare("INSERT INTO admins VALUES(?,?,?,?,?,?)");
 
 $sql2->bind_param('iissss', $idCom, $id, $name, $passwordEncrypt, $formatImage, $keyssEncrypt);
@@ -70,7 +71,6 @@ $sql2->execute();
 
 
 header('Location: ./resultadoAdd.html?keyss='.$keyssString);
-
 
 $sql2->close();
 ?>

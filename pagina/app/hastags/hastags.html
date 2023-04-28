@@ -186,10 +186,9 @@
                                     <h4 class="modal-title fw-bold text-start">Realiza tu retarian:</h4>
                                     <button id="closeRetarians" type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                     </div>
-                                    <form action="./comentarios/comentarios.php" method="post">
-                                        <input type="hidden" id="url" name="url">
-                                        <input type="hidden" id="idUserComment" name="idUserComment">
-                                        <input type="hidden" id="idTarianComment" name="idTarianComment">
+                                    <form action="../mostrar/insertaRetarians.php" method="post">
+                                        <input type="hidden" name="idUserRetarians" id="idUserRetarians" style="width: 0px !important; ">
+                                        <input type="hidden" name="idTarianRetarians" id="idTarianRetarians" style="width: 0px !important; ">
 
                                          <!-- Modal body -->
                                     <div class="modal-body col text-center">

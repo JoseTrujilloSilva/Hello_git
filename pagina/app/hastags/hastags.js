@@ -29,6 +29,8 @@ function codigo() {
     $('#retarians').on('click', eventoRetarians);
     $('#closeRetarians').on('click', eventoRetarians);
     $('#favoritos').attr('href', '../explorar/favoritos/mueveFavoritos.php?idUser='+idUser);
+    $('#url').val(window.location.href);
+    $('#idUserRetarians').val(idUser);
 
     $('#idUserComment').val(idUser);
 
@@ -112,6 +114,7 @@ function codigo() {
         $('#imgFav').val('');
         $('#videoFav').val('');
         $('#pdfFav').val('');
+        $('#retarianContenido').html('');
 
             fetch(idCom+'Hastags.json')
             .then(function(res){

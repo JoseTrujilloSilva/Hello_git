@@ -30,7 +30,7 @@ if (move_uploaded_file($rutaArch, $rutaCompleta)) {
     echo 'Ha ocurrido un error al cargar el archivo.';
 }
 
-$idCom = $_POST['idCom'];
+$idCom = explode('=', $_POST['idCom'])[1];
 $name = '@'.$_POST['name'];
 $password = $_POST['password'];
 $id = random_int(900, 9999999);

@@ -44,6 +44,7 @@ fwrite($fh, json_encode($arrayResultadoJson)) or die("No se pudo escribir en el 
 
 fclose($fh);
 
+
 header('Location: '.$url);
 
 
