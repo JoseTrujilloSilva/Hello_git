@@ -1,1 +1,1 @@
-Tarians es una próxima app de código abierto que esta en creacción.... proximamente os seguiré informando.
+Tarians es una próxima app de código abierto que esta en creacción.... proximamente os seguiré informando. kjasndasd
